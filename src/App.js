@@ -8,9 +8,9 @@ function App() {
       <header>
         <nav>
           <ul>
-            <div>
+            <li>
               <a href="#1">Здесь будет Логотип</a>
-            </div>
+            </li>
             <li>
               <a href="#2">Домой</a>
             </li>
@@ -27,7 +27,7 @@ function App() {
         </nav>
       </header>
       <main>
-        <section>
+        <section className="container">
           <h1>Сопровождение Джунов</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro unde

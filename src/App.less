@@ -1,3 +1,44 @@
 .App {
-  background: lightblue;
+    background: lightblue;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+//header
+header {
+    background: gray;
+    position: sticky;
+    top: 0px;
+
+    li {
+        display: inline;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        color: white;
+    }
+}
+
+//first section
+section:nth-child(1) {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        padding-bottom: 1.5rem;
+    }
 }
