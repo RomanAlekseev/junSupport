@@ -7,9 +7,12 @@ function App() {
     <div className="App">
       <header>
         <nav>
-          <ul>
-            <li>
-              <a href="#1">Здесь будет Логотип</a>
+          <ul className="container">
+            <li className="logo">
+                <div className="round">
+                  <div className="phone"></div>
+                  <span>Jun</span><br></br><i>Support</i>
+                </div>
             </li>
             <li>
               <a href="#2">Домой</a>
