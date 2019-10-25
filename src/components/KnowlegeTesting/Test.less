@@ -1,0 +1,41 @@
+.testing {
+    height: 91vh;
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    hr {
+        padding-bottom: 1rem;
+    }
+    .relative-container {
+        position: relative;
+        width: 100%;
+    }
+    .counter {
+        position: absolute;
+        top: 6rem;
+    }
+
+    button:not(.control) {
+        position: absolute;
+        top: 2rem;
+        left: 8rem;
+    }
+    .someInfo {
+        position: absolute;
+        &:nth-child(2) {
+            right: -70rem;
+        }
+    }
+    .control {
+        position: absolute;
+    }
+    .control.r {
+        right: 10rem;
+    }
+}

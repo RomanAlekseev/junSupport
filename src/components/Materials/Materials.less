@@ -1,0 +1,128 @@
+main#materials {
+background: linear-gradient(to right, #ececf0 22vw, white 20vw);
+    min-height: 92vh;
+    overflow: hidden;
+}
+.materials-navigation {
+    //z-index: 99;
+    margin-top: 0.55rem;
+    //position: fixed;
+    background: #ececf0;
+    min-height: 91vh;
+    height: auto;
+    hr {
+        width: 100%;
+    }
+    ul {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 1rem;
+            color: gray;
+        }
+    }
+    li{
+        padding-top: 1rem;
+        font-style: italic;
+        font-weight: 400;
+        color: rgb(82, 77, 77);
+
+        &:nth-child(2) {
+            color: rgb(8, 12, 231);
+        }
+        font-size: 1.1rem;
+    }
+}
+
+.materials-content {
+    //padding-left: 27vw;
+    h2.mat-title {
+        padding-top: 0rem;
+        font-size: 3rem;
+        font-weight: 200;
+        padding-bottom: 2rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        padding-bottom: 1.5rem;
+    }
+    li {
+        list-style-position: inside;
+    }
+}
+.listOfElements{
+    position: fixed;
+    min-height: 92%;
+    background: #ececf0;
+    //overflow: auto;
+    // height: 91vh;
+    p {
+        padding-bottom: 0;
+    }
+    .innerList{
+        font-size: 0.95rem;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        li:first-child {
+            padding-top: 0;
+        }
+        li {
+            font-style: italic;
+            font-size: 1rem;
+            font-weight: normal;
+            &:hover {
+                color: darkgrey;
+            }
+        }
+    }
+    .active {
+        color: rgb(8, 12, 231);
+        text-decoration: none;
+        font-weight: 500;
+
+        &::before {
+            position: absolute;
+            margin-left: -1rem;
+            margin-top: 0.5rem;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 0.5rem;
+            width: 0.5rem;
+            background: blue;
+        }
+        &:hover {
+            color: rgb(37, 9, 160);
+        }
+    }
+
+    a {
+        color: rgb(77, 70, 70);
+        &:hover {
+            color: rgb(8, 12, 231);
+        }
+    }
+}
+
+.invis {
+   display: none;
+}
+ul.innerList {
+    display: none;
+    height: 0;
+    transition: display 1s ease-out ;
+}
+.invis:checked + ul.innerList {
+    display: flex;
+}
+
+.mini-menu {
+    padding-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

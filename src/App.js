@@ -1,55 +1,30 @@
-import React from 'react';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.less";
+import "./CSS_Global/App.less";
 
-import KnowledgeTesting from "./components/TestingPage"
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import ContactUs from "./components/ContactUs"
+import MainPage from "./components/MainPage";
+import Materials from "./components/Materials";
+import Test from './components/KnowlegeTesting';
+import { Beforeunload } from 'react-beforeunload';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <nav>
-          <ul className="container">
-            <li className="logo">
-                <div className="junSupport">
-                  <div className="phone"></div>
-                  <span>Jun</span><br></br><i>Support</i>
-                </div>
-            </li>
-            <li>
-              <a href="#JunSupport">О нас</a>
-            </li>
-            <li>
-              <a href="#skills">Наш опыт</a>
-            </li>
-            <li>
-              <a href="#services">Услуги</a>
-            </li>
-            <li>
-              <a href="#5">Голосование</a>
-            </li>
-            <li>
-              <a href="#5">Бесплатное тестироваине</a>
-            </li>
-            <li>
-              <a href="#5">Связаться со Мной</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-      
-        <KnowledgeTesting />
-
-      </main>
-      <footer>
-        <div className="container">
-          <div className="row d-flex">
-             <p className="text-info pt-4">Создан в 2019</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <React.Fragment>
+        <Navbar />
+          <Switch>
+            <Route exact path="/" component={MainPage} />
+            <Route path="/materials" component={Materials} />
+            <Route path="/contactUs" component={ContactUs} />
+            <Beforeunload onBeforeunload={event => event.preventDefault()}>
+              <Route path="/test" component={Test} />
+            </Beforeunload>
+          </Switch>
+      </React.Fragment>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,52 @@
+@import "../../CSS_Global/variable.less";
+.header-height{
+    height: 4rem;
+} 
+header {
+    background: #182169;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 2;
+    font-size: 16px;
+    font-weight: 100;
+    min-height: 4rem;
+    border-bottom: 1px solid black;
+}
+
+nav {
+    ul {
+        height: 8vh;
+        min-height: 4rem;
+    }
+
+    li {
+        display: inline;
+        margin-right: 2rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        color: #fff;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            color: rgb(216, 204, 204);
+        }
+    }
+
+    .logo {
+        z-index: 3;
+    }
+}
+.active {
+    text-decoration: underline;
+    &:hover {
+        text-shadow: none;
+        text-decoration: underline;
+        color: #fff;
+    }
+}

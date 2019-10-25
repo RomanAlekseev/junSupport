@@ -1,0 +1,40 @@
+//@logo_height: 3.5rem;
+@import "../../CSS_Global/variable.less";
+
+.junSupport-logo {
+    font-size: @logo_width / 3;
+    min-height: @logo_height;
+    min-width: @logo_width;
+    position: absolute;
+    border-radius: 50%;
+    background: blue;
+    color: #fff;
+
+    span {
+        position: absolute;
+        left: @logo_width / 5;
+        top: @logo_width / 15;
+        font-weight: bold;
+    }
+
+    i {
+        position: absolute;
+        top: @logo_width / 3.33;
+        left: -@logo_width / 15;
+        font-weight: normal;
+        transform: rotate(-7deg);
+        text-shadow: 1px 1px 1px rgb(31, 31, 32), -1px - 1px 1px blue;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: @logo_width / 20;
+        left: @logo_width / 20;
+        width: @logo_width - @logo_width / 10;
+        height: @logo_height - @logo_height / 10;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+}

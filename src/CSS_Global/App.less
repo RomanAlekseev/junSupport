@@ -1,0 +1,40 @@
+@import "./variable.less";
+html, body {
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+//logo Container Global
+.logo {
+    position: relative;
+    min-height: @logo_height;
+    min-width: @logo_width;
+    align-self: center;
+    i {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.3rem;
+    }
+}
+
+header .logo {
+    margin-left: -15px;
+}
+//Brend title
+.brend-title {
+    color: blue;
+    text-shadow: 1px 1px 1px white, 1px 1px 2px blue;
+    padding-bottom: 1.5rem;
+    transform: skew(-10deg) rotate(-2deg);
+}
+
+//Most common
