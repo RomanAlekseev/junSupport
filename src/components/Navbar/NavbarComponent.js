@@ -22,17 +22,17 @@ function NavbarComponent() {
           </li>
           <li>
             <NavLink to="/materials">
-              Материалы
+            <ion-icon name="book"></ion-icon> Материалы
             </NavLink>
           </li>
           <li>
             <NavLink to="/test">
-              Тест знаний
+            <ion-icon name="checkbox-outline"></ion-icon> Тест знаний
             </NavLink>
           </li>
           <li>
             <NavLink to="/contactUs">
-              Контактные данные
+            <ion-icon name="contact"></ion-icon>  Контактные данные
             </NavLink>
           </li>
         </ul>

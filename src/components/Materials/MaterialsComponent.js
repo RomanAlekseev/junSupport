@@ -14,10 +14,11 @@ function Materials() {
           <nav className="materials-navigation col-2 col-md-4">
             <ul className="listOfElements">
               {/* <p>Материалы для подготовки --> Содержание:</p> */}
-              <p className="d-flex justify-content-between"><span>Меню</span></p>
+              <p className="d-flex justify-content-between align-items-center"><span>Меню</span><ion-icon name="menu" size="large"></ion-icon></p>
+              <hr/>
               <li>
                 <label for="checkbox">
-                  Вопросы с собеседований/ответы
+                <ion-icon name="help"></ion-icon> Вопросы с собеседований/ответы
                 </label>
                 <input type="checkbox" id="checkbox" className="invis"/>
                 <ul className="innerList">
@@ -38,11 +39,11 @@ function Materials() {
                   </li>
                 </ul>
               </li>
-              <li><label>Требования к Junior JS Developer</label></li>
-              <li><label>Задачи с собеседований с решением</label></li>
-              <li><label>Библиография</label></li>
-              <li><label>Запись собеседования</label></li>
-              <li><label>Шпоргалки</label></li>
+              <li><label><ion-icon name="clipboard"></ion-icon> Требования к Junior JS Developer</label></li>
+              <li><label><ion-icon name="calculator"></ion-icon> Задачи с собеседований с решением</label></li>
+              <li><label><ion-icon name="bookmarks"></ion-icon> Библиография</label></li>
+              <li><label><ion-icon name="play-circle"></ion-icon> Запись собеседования</label></li>
+              <li><label><ion-icon name="paper"></ion-icon> Шпоргалки</label></li>
               {/* <li><label>Требования к Junior JS Developer</label></li>
               <li><label>Задачи с собеседований с решением</label></li>
               <li><label>Библиография</label></li>

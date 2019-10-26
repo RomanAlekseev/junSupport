@@ -23,6 +23,9 @@ function App() {
               <Route path="/test" component={Test} />
             </Beforeunload>
           </Switch>
+          <div className="footer">
+            <div className="container">Roman Alekseev&#9400; 2019 </div>
+            </div>
       </React.Fragment>
     </BrowserRouter>
   );

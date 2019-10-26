@@ -141,6 +141,11 @@
     ]
   },
   "devDependencies": {
-    "@types/prismjs": "^1.16.0"
+    "@types/prismjs": "^1.16.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
   }
 }
