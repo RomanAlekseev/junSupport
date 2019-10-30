@@ -1,64 +1,61 @@
 @import "../../CSS_Global/variable.less";
-.header-height{
-    height: 4rem;
-} 
 header {
-    //background: #182169;
-    background: linear-gradient(110deg, #182169 75%, rgb(23, 21, 145) 80%, #182169 85%, rgb(23, 21, 148) 90%, #182169 95%);
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    z-index: 2;
-    font-size: 16px;
-    font-weight: 100;
-    min-height: 4rem;
-    border-bottom: 1px solid black;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+  min-height: 4rem;
+  background: linear-gradient(
+    95deg,
+    #182169 75%,
+    rgb(23, 21, 145) 80%,
+    #182169 85%,
+    rgb(23, 21, 148) 90%,
+    #182169 95%
+  );
+  font-size: 1.1rem;
+  font-weight: 100;
+  border-bottom: 1px solid black;
 }
+.navbar {
+  .navbar__item {
+    display: inline;
+    margin-right: 2rem;
 
-nav {
-    ul {
-        height: 8vh;
-        min-height: 4rem;
+    &:last-child {
+      margin-right: 0;
     }
+  }
+  //@navbar__item_logo Contain main logo
+  .navbar__item_logo {
+    margin-right: auto;
+    padding-left: 0;
+  }
 
-    li {
-        display: inline;
-        margin-right: 2rem;
-
-        &:last-child {
-            margin-right: 0;
-        }
+  a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+      color: rgb(216, 204, 204);
     }
+  }
 
-    a {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        &:hover {
-            color: #fff;
-            text-decoration: none;
-            color: rgb(216, 204, 204);
-        }
-    }
-
-    .logo {
-        z-index: 3;
-    }
+  .logo {
+    z-index: 3;
+  }
 }
 .active {
+  text-decoration: underline;
+  &:hover {
+    text-shadow: none;
     text-decoration: underline;
-    &:hover {
-        text-shadow: none;
-        text-decoration: underline;
-        color: #fff;
-    }
+    color: #fff;
+  }
 }
 
 nav a ion-icon {
-    font-size: 1.5rem;
-    margin-right: 0.3rem;
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
 }
-
-// ion-icon {
-//     color: yellow;
-// }

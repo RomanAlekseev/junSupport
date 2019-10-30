@@ -1,114 +1,123 @@
 @import "../../CSS_Global/variable.less";
 
-.intro {
-    height: 91vh;
-    min-height: 400px;
-    text-align: center;
-    li {
-        list-style-type: none;
-        padding-bottom: 0.5rem;
-
-        a {
-            color: black;
-            &:hover {
-                color: rgb(49, 47, 47);
-                text-decoration: none;
-            }
-        }
-    }
-
-    .logo {
-        min-width: @logo_width * 1.4;
-    }
-
-    .junSupport-logo {
-        transform: scale(1.3);
-    }
-    .sub-title {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        font-size: 1.2rem;
-        font-weight: 200;
-        color: black;
-    }
-
-    .our_mateerials {
-        animation: fromLeft 650ms ease-out 1;
-        h2 {
-            font-size: 1.2rem;
-            padding-bottom: 1.5rem;
-            font-weight: 500;
-        }
-    }
-
-    hr {
-        margin-bottom: 3rem;
-        background: rgb(180, 178, 178);
-        position: relative;
-        width: 30%;
-        height: 1px;
-        animation: fromRight 600ms ease-out 1;
-    }
-    .button {
-        width: 13rem;
-        position: relative;
-        animation: fromRightB 650ms ease-out 1;
-    }
-    .title {
-        animation: fromLeft 500ms 1;
-    }
-}
-
-@keyframes fromLeft {
-    0% {
-        position: relative;
-        margin-left: -100rem;
-    }
-    100% {
-        position: static;
-    }
-}
-@keyframes fromRight {
-    0% {
-        position: relative;
-        left: 100rem;
-    }
-    100% {
-        position: relative;
-        left: 0rem;
-    }
-}
-@keyframes fromRightB {
-    0% {
-        position: relative;
-        left: 100rem;
-    }
-    100% {
-        position: relative;
-        left: 0rem;
-    }
-}
-.logo-icon {
-    height: 2rem;
-}
-
-h2.brend-title {
-    font-size: 2.5rem;
-}
-a.btn {
-    ion-icon {
-        color: yellow;
-    }
-}
-
-.intro:nth-child(2){
-  background: linear-gradient(185deg, white 75%,rgba(218, 106, 106, 0.24) 85%, #9ca0c2 95%);
+.intro,
+.about-us {
+  height: 91vh;
+  min-height: 400px;
+  text-align: center;
 
   hr {
-      animation: none;
+    margin-bottom: 2rem;
+    background: rgb(180, 178, 178);
+    position: relative;
+    width: 30%;
+    height: 1px;
+    animation: fromRight 600ms ease-out 1;
   }
+}
+.our-services__list-item {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
 
   a {
-      padding-right: 2rem;
+    color: black;
+    &:hover {
+      color: rgb(49, 47, 47);
+      text-decoration: none;
+    }
+  }
+}
+
+.intro {
+  .logo {
+    min-width: @logo_width * 1.4;
+  }
+
+  .junSupport-logo {
+    transform: scale(1.3);
+  }
+  .sub-title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: black;
+  }
+
+  .our-services {
+    animation: fromLeft 650ms ease-out 1;
+    .our-services__title {
+      font-size: 1.2rem;
+      padding-bottom: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  .our-services_button {
+    width: 13rem;
+    position: relative;
+    animation: fromRightB 650ms ease-out 1;
+  }
+  .intro__title {
+    animation: fromLeft 500ms 1;
+  }
+}
+
+.brend-title {
+  font-size: 2.5rem;
+}
+a.btn {
+  ion-icon {
+    color: yellow;
+  }
+}
+
+.about-us {
+  background: linear-gradient(
+    185deg,
+    rgba(218, 106, 106, 0.24) 10%,
+    #9ca0c25e 15%,
+    white 25%,
+    white 75%,
+    rgba(218, 106, 106, 0.24) 85%,
+    #9ca0c2 95%
+  );
+
+  hr {
+    animation: none;
+  }
+
+  hr + a {
+    padding-right: 2rem;
+  }
+}
+
+//animation
+@keyframes fromLeft {
+  0% {
+    position: relative;
+    margin-left: -100rem;
+  }
+  100% {
+    position: static;
+  }
+}
+@keyframes fromRight {
+  0% {
+    position: relative;
+    left: 100rem;
+  }
+  100% {
+    position: relative;
+    left: 0rem;
+  }
+}
+@keyframes fromRightB {
+  0% {
+    position: relative;
+    left: 100rem;
+  }
+  100% {
+    position: relative;
+    left: 0rem;
   }
 }
