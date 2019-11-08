@@ -2,7 +2,7 @@
 header {
   position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   min-height: 4rem;
   background: linear-gradient(
@@ -13,6 +13,7 @@ header {
     rgb(23, 21, 148) 90%,
     #182169 95%
   );
+  opacity: 0.98;
   font-size: 1.1rem;
   font-weight: 100;
   border-bottom: 1px solid black;
@@ -21,10 +22,6 @@ header {
   .navbar__item {
     display: inline;
     margin-right: 2rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
   //@navbar__item_logo Contain main logo
   .navbar__item_logo {
@@ -40,18 +37,27 @@ header {
       text-decoration: none;
       color: rgb(216, 204, 204);
     }
+    .link-text {
+      &::after {
+        content: "";
+        margin: auto;
+        display: block;
+        height: 1px;
+        width: 0px;
+        background-color: white;
+        transition: all 0.3s;
+      }
+    }
   }
 
   .logo {
-    z-index: 3;
+    z-index: 4;
   }
 }
-.active {
-  text-decoration: underline;
-  &:hover {
-    text-shadow: none;
-    text-decoration: underline;
-    color: #fff;
+a.active .link-text {
+  &::after {
+    content: "";
+    width: 100%;
   }
 }
 

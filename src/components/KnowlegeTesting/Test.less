@@ -1,41 +1,80 @@
 .testing {
-    height: 91vh;
-
-    p {
-        font-size: 1.3rem;
-    }
-
+  height: 91vh;
+  form {
+    min-width: 35rem;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.582),
+      rgba(128, 128, 128, 0.637)
+    );
+    border-radius: 10px;
     label {
-        font-size: 1.2rem;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      &:first-child {
+        margin-top: 3rem;
+      }
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+      input {
+        margin-right: 0.5rem;
+      }
     }
+  }
 
-    hr {
-        padding-bottom: 1rem;
-    }
-    .relative-container {
-        position: relative;
-        width: 100%;
-    }
-    .counter {
-        position: absolute;
-        top: 6rem;
-    }
+  p {
+    font-size: 1.3rem;
+  }
 
-    button:not(.control) {
-        position: absolute;
-        top: 2rem;
-        left: 8rem;
+  label {
+    font-size: 1.2rem;
+    min-width: 25rem;
+  }
+
+  hr {
+    padding-bottom: 1rem;
+  }
+  .relative-container {
+    position: relative;
+    width: 100%;
+  }
+  .counter {
+    position: absolute;
+    top: 6rem;
+  }
+
+  button:not(.control) {
+    position: absolute;
+    top: 2rem;
+    left: 8rem;
+  }
+  .someInfo {
+    position: absolute;
+    &:nth-child(2) {
+      right: -70rem;
     }
-    .someInfo {
-        position: absolute;
-        &:nth-child(2) {
-            right: -70rem;
-        }
+  }
+  .control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.178);
     }
-    .control {
-        position: absolute;
-    }
-    .control.r {
-        right: 10rem;
-    }
+  }
+  .control.r {
+    right: 10rem;
+  }
+}
+.question {
+  border-bottom: 1px solid grey;
+  display: block;
+  width: 35rem;
 }

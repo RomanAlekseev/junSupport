@@ -4,11 +4,13 @@ import "./CSS_Global/App.less";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-// import ContactUs from "./components/ContactUs"
+import Footer from "./components/Footer";
+import ContactUs from "./components/ContactUs";
 import MainPage from "./components/MainPage";
 import Materials from "./components/Materials";
-// import Test from './components/KnowlegeTesting';
-// import { Beforeunload } from 'react-beforeunload';
+import Test from "./components/KnowlegeTesting";
+import { Beforeunload } from "react-beforeunload";
+import List from "./components/contentList";
 
 function App() {
   return (
@@ -18,15 +20,13 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/materials" component={Materials} />
-          {/* 
           <Route path="/contactUs" component={ContactUs} />
+          <Route path="/tests" component={List} />
           <Beforeunload onBeforeunload={event => event.preventDefault()}>
-            <Route path="/test" component={Test} />
-          </Beforeunload> */}
+            <Route path="/test/Job_Interview" component={Test} />
+          </Beforeunload>
         </Switch>
-        <div className="footer">
-          <div className="container-fluid">Roman Alekseev&#9400; 2019 </div>
-        </div>
+        <Footer />
       </React.Fragment>
     </BrowserRouter>
   );

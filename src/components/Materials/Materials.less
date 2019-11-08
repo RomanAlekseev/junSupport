@@ -136,6 +136,8 @@
 //   }
 // }
 
+// Menu good
+
 .page-content {
   display: flex;
   height: 88vh;
@@ -146,19 +148,32 @@
   height: 100%;
 }
 .materials-sidebar {
-  background-color: rgb(165, 165, 209);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.233),
+    rgba(255, 0, 0, 0.158),
+    rgba(0, 0, 255, 0.219)
+  );
   width: 0rem;
   transition: width 0.5s;
   //transform: translateX(-1000px);
   //display: none;
+  hr {
+    display: none;
+  }
   span {
     display: block;
     padding-top: 2rem;
   }
   ul {
     list-style-type: none;
-    padding-top: 3rem;
-    font-weight: bold;
+    padding-top: 2rem;
+    font-weight: 400;
+
+    li {
+      color: rgb(103, 103, 124);
+      padding-top: 1.5rem;
+    }
   }
   ul,
   span {
@@ -171,21 +186,104 @@
 }
 .burger {
   position: absolute;
-  top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1rem;
+  left: 0.5rem;
 }
 #materials {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // h1 {
+  //   //padding-top: 7rem;
+  // }
   position: relative;
   width: 90%;
   margin: auto;
 }
-h1 {
-  padding-top: 5rem;
-}
 .open {
   width: 25rem;
   ul,
-  span {
+  span,
+  hr {
     display: block;
     color: black;
+  }
+}
+
+.input-group {
+  display: none;
+}
+.open .input-group {
+  display: flex;
+}
+
+.choosenElement {
+  color: black !important;
+}
+.burger {
+  transition: all 0.5s;
+  //background: blueviolet;
+  height: 3.4rem;
+  width: 3.4rem;
+  border-radius: 50%;
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.103);
+  }
+}
+.line {
+  margin-top: 0.5rem;
+  width: 2rem;
+  height: 1px;
+  background: black;
+  transition: all 0.5s ease-out;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.first.rotate {
+  position: relative;
+  top: 6px;
+  width: 1rem;
+  transform: rotate(167deg);
+}
+.third.rotate {
+  position: relative;
+  top: -5px;
+  width: 1rem;
+  transform: rotate(195deg);
+}
+.mini-menu {
+  position: absolute;
+  top: 5rem;
+}
+
+.controls {
+  position: absolute;
+  left: 0.5rem;
+  z-index: 2;
+  transition: all 0.5s;
+
+  .mini-menu {
+    transition: all 0.5s;
+    left: 5rem;
+    top: 5rem;
+  }
+}
+
+.disposition {
+  transition: all 0.5s;
+  left: 21rem;
+  // .burger {
+  //   left: 21rem;
+  // }
+  .mini-menu {
+    left: 1rem;
+    top: 5rem;
   }
 }
